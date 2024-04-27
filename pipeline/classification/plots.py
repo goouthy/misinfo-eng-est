@@ -23,10 +23,12 @@ def stats_plot(data):
 def distr_plot(data):
     sns.set_theme(style="whitegrid")
 
-    sns.histplot(data=data, x='Confidence', hue='Prediction', bins=100, element='step', alpha=0.4)
+    sns.histplot(data=data, x='Confidence', hue='Prediction', bins=100, element='step', alpha=0.5)
     
+    plt.title('Prediction Confidence')
     plt.xlabel('Confidence')
     plt.ylabel('Count')
-    plt.legend(title='Prediction') 
+    plt.legend("")
+    # plt.legend(title='Prediction') 
 
     plt.show()

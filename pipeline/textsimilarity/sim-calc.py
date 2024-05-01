@@ -89,7 +89,7 @@ print('Total similarity calculation time: ', total_similarity_calc_time / 60, 'm
 print('Total execution time: ', (time.time() - start_time) / 60, 'minutes')
 
 # Thresholding
-threshold = 0.75
+threshold = 0.5
 
 scores_combined = pd.read_parquet('similarity_results.parquet')
 

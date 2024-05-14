@@ -29,7 +29,7 @@ def stats_plot(data):
 
 def distr_plot(data, ontop=1):
     sns.set_theme(style="white")
-    font = 16
+    font = 18
 
     plt.figure(figsize=(6, 5))
 
@@ -55,7 +55,7 @@ def distr_plot(data, ontop=1):
 
 def out_distr(data):
     sns.set_theme(style="white")
-    font_size = 16
+    font_size = 18
 
     df = data.copy()
     df['Label'] = df['Label'].map({0: 'Not Misinformation', 1: 'Misinformation'})

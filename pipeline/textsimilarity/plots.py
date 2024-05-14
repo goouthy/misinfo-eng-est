@@ -7,28 +7,28 @@ warnings.filterwarnings("ignore")
 
 def cos_sim_plot(data):
     sns.set_theme(style="white")
-    font = 14
+    font = 16
 
     plt.figure(figsize=(5, 4)) 
 
     ax = sns.histplot(data=data, x='Cosine Similarity Score', bins=80, element='step', color='#284F8C')
 
     plt.xlabel('Cosine Similarity Score', fontsize=font)
-    plt.ylabel('Estonian texts', fontsize=font)
+    plt.ylabel('Articles', fontsize=font)
     ax.tick_params(axis='both', labelsize=font-2)
 
     plt.show()
 
 def counts_plot(data):
     sns.set_theme(style="white")
-    font = 14
+    font = 16
 
     plt.figure(figsize=(5, 4)) 
 
     ax = sns.histplot(data=data, x='Count_Over_Threshold', bins=50, element='step', color='#284F8C')
 
     plt.xlabel('Similarity Matches', fontsize=font)
-    plt.ylabel('Estonian texts', fontsize=font)
+    plt.ylabel('Articles', fontsize=font)
     ax.tick_params(axis='both', labelsize=font-2)
 
     plt.show()
@@ -42,9 +42,9 @@ def wrap_labels(ax, width, break_long_words=False):
     ax.set_xticklabels(labels, rotation=0)
 
 def annt_plot(data, color='#284F8C'):
-    font = 16
+    font = 20
     similarity_order = ['Similar', 'Similar (Subtopic)', 'Somewhat similar', 'Dissimilar']
-    plt.figure(figsize=(14, 5))
+    plt.figure(figsize=(16, 6))
     gs = gridspec.GridSpec(1, 3, width_ratios=[2.5, 1.5, 2]) 
 
     ax1 = plt.subplot(gs[0])

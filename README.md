@@ -12,35 +12,24 @@ This thesis focuses on identifying fake health news in Estonian news articles by
 
 ## Repository Structure
 
-The repository is organized as follows:
+- **eng-dataset/**: Contains collected English articles from previously annotated fake news datasets, including:
+  - [Med-MMHL](https://github.com/styxsys0927/Med-MMHL)
+  - [Monant Medical Misinformation Dataset](https://github.com/kinit-sk/medical-misinformation-dataset)
+  - [FNID: Fake News Inference Dataset](https://ieee-dataport.org/open-access/fnid-fake-news-inference-dataset)
+  - [ISOT Fake News Dataset](https://onlineacademiccommunity.uvic.ca/isot/?utm_medium=redirect&utm_source=%2Fdatasets%2Ffake-news%2Findex.php&utm_campaign=redirect-usage)
+  - [ReCOVery](https://github.com/apurvamulay/ReCOVery)
 
-eng-dataset/: Collected English articles from previous works.
-Sources:
-\begin{table}[H]
-\centering
-\caption{Previously Annotated English Fake News Datasets}
-\label{tab:engarticles}
-\begin{tabular}{@{}lllll@{}}
-\toprule
-\textbf{Dataset} & \textbf{Articles} & \textbf{Date Range} & & \
-\midrule
-Med-MMHL \cite{sun2023med} & 6059 & Jan 2017 -- May 2023\textsuperscript{} & & \
-Monant Medical Misinformation Dataset \cite{srba2022monant} & 5680 & Apr 2001 -- Jan 2022 & & \
-FNID: Fake News Inference Dataset \cite{sadeghi2022fake} & 2988 & Aug 2007 -- Apr 2020 & & \
-ISOT Fake News Dataset \cite{ahmed2018detecting} & 4756 & Apr 2015 -- Feb 2018 & & \
-ReCOVery \cite{zhou2020recovery} & 1910 & Jan 2020 -- May 2020 & & \
-\midrule
-\textbf{Total} & \textbf{21393} & \textbf{Apr 2001 -- May 2023} & & \
-\bottomrule
-\end{tabular}
-\textsuperscript{}Claimed by authors, date variable not included in the dataset.
-\end{table}
-est-dataset/: Collected Estonian articles and code for web scraping.
-pipeline/:
-textsimilarity/: Phase-I methodology including similarity calculation and analysis.
-classification/: Phase-II methodology including pipeline and classifier comparison notebooks.
-models/: Training and prediction files for the compared classifiers.
-data/: Contains classifier validation metrics, classifier predictions, gold standard dataset, silver standard dataset, and final dataset.
+- **est-dataset/**: Contains collected Estonian articles and the code used for web scraping these articles.
+
+- **pipeline/**:
+  - **textsimilarity/**: Implements Phase-I of the methodology, which includes the calculation of semantic similarity and similarity analysis between English and Estonian articles.
+  - **classification/**: Implements Phase-II of the methodology, which includes pipeline and classifier comparison notebooks.
+    - **models/**: Contains training and prediction files for various classifiers.
+    - **data/**: Contains classifier validation metrics, classifier predictions, gold standard dataset, silver standard dataset, and final dataset.
+
+## Contact
+
+For any questions or further information, please contact Li Merila at [li.merila@ut.ee].
 
 
 

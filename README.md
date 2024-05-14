@@ -29,7 +29,7 @@ This thesis focuses on identifying fake health news in Estonian news articles by
     - 
 
 ## Results
-The resulting dataset (pipeline/data/) consists of 3,125 Estonian health-related articles, each meticulously labelled as either fake news or authentic. Observations indicate that the two-phase process is effective in generating accurate ground truth labels, providing a valuable resource for future research. The overall approach establishes a robust framework for tackling fake health news, contributing significant insights into adapting fake news detection strategies to low-resource settings.
+The resulting dataset (pipeline/classification/data/final-dataset) consists of 3,125 Estonian health-related articles, each meticulously labelled as either fake news or authentic. Observations indicate that the two-phase process is effective in generating accurate ground truth labels, providing a valuable resource for future research. The overall approach establishes a robust framework for tackling fake health news, contributing significant insights into adapting fake news detection strategies to low-resource settings.
 
 
 ## Contact

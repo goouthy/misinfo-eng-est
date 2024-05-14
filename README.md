@@ -2,6 +2,8 @@
 
 ## Institution
 University of Tartu 
+Faculty of Science and Technology
+Institute of Computer Science
 
 ## Author
 Li Merila

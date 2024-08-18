@@ -25,7 +25,7 @@ input = cleancolumn(input, 'Text')
 
 train, val = splitandbalance(input)
 
-tokenizer = AutoTokenizer.from_pretrained('google/electra-base-discriminator')
+tokenizer = AutoTokenizer.from_pretrained('google/electra-large-discriminator')
 
 train_encodings = tokenizer(train['Text'].tolist(), padding=True, truncation=True, max_length=512, return_tensors="pt")
 val_encodings = tokenizer(val['Text'].tolist(), padding=True, truncation=True, max_length=512, return_tensors="pt")
@@ -38,7 +38,7 @@ val_dataset = TensorDataset(val_encodings['input_ids'], val_encodings['attention
 train_loader = DataLoader(train_dataset, sampler=RandomSampler(train_dataset), batch_size=bs)
 val_loader = DataLoader(val_dataset, sampler=SequentialSampler(val_dataset), batch_size=bs)
 
-model = AutoModelForSequenceClassification.from_pretrained('google/electra-base-discriminator', num_labels=2)
+model = AutoModelForSequenceClassification.from_pretrained('google/electra-large-discriminator', num_labels=2)
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 model.to(device)
 optimizer = optim.AdamW(model.parameters(), lr=lr, weight_decay=0.1)

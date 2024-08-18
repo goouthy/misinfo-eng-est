@@ -3,21 +3,20 @@
 from datetime import datetime
 import time
 
-import numpy as np
 import pandas as pd
 import torch
 import torch.nn.functional as F
 from torch import optim
 from torch.utils.data import DataLoader, RandomSampler, SequentialSampler, TensorDataset
 from transformers import XLMRobertaTokenizer, XLMRobertaForSequenceClassification
-from sklearn.metrics import accuracy_score, confusion_matrix
+from sklearn.metrics import accuracy_score
 
 from textclean import cleancolumn
 from trainsplit import splitandbalance
 
 mn = 'XLM-RoBERTa'
-bs = 64
-epochs = 12
+bs = 16
+epochs = 6
 lr = 1e-5
 
 input = pd.read_csv('goldstandard-dataset.csv')
@@ -98,10 +97,6 @@ training_time = time.time() - start_time
 timestamp = datetime.now().strftime('%Y-%m-%d-%H-%M')
 stats_df = pd.DataFrame(epoch_stats)
 stats_df.to_csv(f'{mn}_epoch_stats_{timestamp}.csv', index=False)
-
-# conf_matrix = confusion_matrix(val_labels, predictions)
-# conf_matrix_df = pd.DataFrame(conf_matrix)
-# conf_matrix_df.to_csv(f'{mn}_confusion_matrix_{timestamp}.csv', index=False)
 
 results_df = pd.DataFrame({
     'EstText Index': indexes,

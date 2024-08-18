@@ -19,7 +19,7 @@ from trainsplit import splitandbalance
 mn = 'mBERT'
 data_dir = './classification/data/'
 
-bs = 16  # Batch size
+bs = 64  # Batch size
 epochs = 6  # Number of epochs
 lr = 1e-5  # Learning rate
 

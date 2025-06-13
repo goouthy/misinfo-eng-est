@@ -1,16 +1,11 @@
-# Cross-Lingual Misinformation Detection: Aligning English and Estonian Fake Health News
+# CAPS: A Cross-Lingual Methodology for Detecting Misinformation in Estonian Health News
 
-## Institution
-University of Tartu    
-Faculty of Science and Technology   
-Institute of Computer Science   
-
-## Author
-Li Merila   
-Data Science, MSc   
+This repository contains resources and methodologies from the research paper titled "CAPS: A Cross-Lingual Methodology for Detecting Misinformation in Estonian Health News".
 
 ## Abstract
-This thesis focuses on identifying fake health news in Estonian news articles by leveraging a pre-labelled dataset in English. The primary objective is to develop a reliable system for generating ground truth labels for fake health news in Estonian, contributing to the broader field of fake news detection. The proposed approach employs a hybrid two-phase methodology involving semantic similarity measurements, manual annotation, classification, and confidence sampling to create a novel fake health news dataset in Estonian.
+
+Health misinformation undermines public trust and hampers adherence to health guidelines. Automated detection is essential, especially for low-resource languages like Estonian, where dedicated resources are scarce. The proposed Cross-lingual Alignment and Confident Prediction Sampling (CAPS) approach leverages English-labeled datasets to create a comprehensive annotated Estonian misinformation dataset efficiently. The resulting dataset includes 8,795 annotated news articles, significantly advancing misinformation detection capabilities for the Estonian language.
+
 
 ## Repository Structure
 
@@ -24,18 +19,20 @@ This thesis focuses on identifying fake health news in Estonian news articles by
 - **est-dataset/**: Contains collected Estonian articles and the code used for web scraping these articles.
 
 - **pipeline/**:
-  - **textsimilarity/**: Implements Phase-I of the methodology, which includes the calculation of semantic similarity and similarity analysis between English and Estonian articles.
-  - **classification/**: Implements Phase-II of the methodology, which includes pipeline and classifier comparison notebooks.
-    - **models/**: Contains training and prediction files for various classifiers.
-    - **data/**: Contains classifier validation metrics, classifier predictions, gold standard dataset, silver standard dataset, and final dataset.
+  - **textsimilarity/**: Phase I methodology: semantic similarity analysis between English and Estonian articles.
+  - **classification/**: Phase II methodology: classifier training, validation, and evaluation notebooks.
+    - **models/**: Classifier models and scripts.
+    - **data/**: Validation metrics, predictions, and finalized datasets.
 
-## Results
-The resulting dataset (pipeline/classification/data/final-dataset) consists of 3,125 Estonian health-related articles, each meticulously labelled as either fake news or authentic. Observations indicate that the two-phase process is effective in generating accurate ground truth labels, providing a valuable resource for future research. The overall approach establishes a robust framework for tackling fake health news, contributing significant insights into adapting fake news detection strategies to low-resource settings.
+- **est-fake-news-dataset/**: Final labeled dataset containing 8,795 Estonian health news articles annotated for misinformation.
 
+## Conclusion
+
+CAPS demonstrates effectiveness in detecting misinformation in low-resource languages by combining cross-lingual alignment and confidence sampling. The developed dataset and methodology are adaptable for broader applications beyond health misinformation, providing essential groundwork for future research and practical interventions.
 
 ## Contact
 
-For any questions or further information, please contact Li Merila at [li.merila@ut.ee].
+For any questions or further information, please contact [Li Tetsmann](li.tetsmann@outlook.com).
 
 
 

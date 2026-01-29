@@ -1,6 +1,6 @@
 # CAPS: A Cross-Lingual Methodology for Detecting Misinformation in Estonian Health News
 
-This repository contains resources and methodologies from the research paper titled "CAPS: A Cross-Lingual Methodology for Detecting Misinformation in Estonian Health News".
+This repository contains resources and methodologies from the paper titled "CAPS: A Cross-Lingual Methodology for Detecting Misinformation in Estonian Health News".
 
 ## Abstract
 
@@ -33,6 +33,10 @@ CAPS demonstrates effectiveness in detecting misinformation in low-resource lang
 ## Contact
 
 For any questions or further information, please contact [Li Tetsmann](li.tetsmann@outlook.com).
+
+## Reference
+
+
 
 
 
